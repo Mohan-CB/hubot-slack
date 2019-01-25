@@ -1,8 +1,8 @@
 {
-  "name": "godfather",
+  "name": "freedom",
   "version": "0.0.0",
   "private": true,
-  "author": "rFang0414 <rui.fang@careerbuilder.com>",
+  "author": "freedom",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
     "hubot": "^3.2.0",
@@ -10,13 +10,19 @@
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
     "hubot-help": "^1.0.1",
+    "hubot-heroku-keepalive": "^1.0.3",
     "hubot-maps": "0.0.3",
     "hubot-pugme": "^0.1.1",
+    "hubot-redis-brain": "^1.0.0",
     "hubot-rules": "^1.0.0",
-    "hubot-script-shellcmd": "0.0.17",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-slack": "^4.6.0"
+    "hubot-slack": "^4.6.0",
+    "hubot-github-webhooks": "^1.1.1",
+    "hubot-group-alias": "^1.0.0",
+    "hubot-teams": "git+ssh://git@github.com/cbdr/hubot-teams.git",
+    "hubot-sandboxes": "git+ssh://git@github.com/cbdr/hubot-sandboxes.git",
+    "hubot-sandbox-webhooks": "git+ssh://git@github.com/cbdr/hubot-sandbox-webhooks.git"
   },
   "engines": {
     "node": "0.10.x"
