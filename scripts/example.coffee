@@ -8,7 +8,21 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
+ss = require 'string-similarity'
+
 module.exports = (robot) ->
+
+  template = ['show sandboxes', 'I am using sandbox', 'build sandbox', 'release sandbox']
+  robot.catchAll (msg) ->
+    input = msg.message.text
+    # if wrong command entered, try to find the best match
+    match = ss.findBestMatch(input, template)
+    output = "Invalid command. Do you mean "
+    if match.bestMatch.target is template[0]
+      output += "\"#{match.bestMatch.target}\"?"
+    else
+      output += "\"#{match.bestMatch.target} <sandbox-name>\"?"
+    msg.send output
 
   robot.hear /badger/i, (res) ->
     res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
